@@ -63,7 +63,7 @@ const Home = ({ show }) => {
         transition={{ duration: 0.5 }}
         className="text-sub text-3xl font-bold pb-3 lg:text-5xl"
       >
-        I am a Talent Blockchain developer (Front-end)
+        I am a Talented Blockchain developer (Front-end)
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, x: -50 }}
