@@ -7,6 +7,9 @@ import qualify from "../Images/qualify.jpeg";
 import nature from "../Images/nature.jpeg";
 import ecommerce from "../Images/ecommerce.jpeg";
 import sectify from "../Images/sectify.jpeg";
+import dapi from "../Images/dapi.jpg";
+import doravet from "../Images/doravet.jpg";
+import greenreward from "../Images/greenreward.jpg";
 import linkedinoyo from "../Images/linkedinoyo.jpeg";
 import { BsLink45Deg } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
@@ -17,7 +20,7 @@ const Project = ({ show }) => {
     <div
       className={`${show && "blur-sm"}  pt-2 px-2 sm:px-5 md:px-20 lg:pl-24 ff`}
     >
-      <h1 className="text-name text-xl sm:text-2xl py-3 text-[#FF5823]">Projects</h1>
+      <h1 className="text-xl sm:text-2xl py-3 text-[#FF5823]">Projects</h1>
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
@@ -336,14 +339,14 @@ const Project = ({ show }) => {
               created with ReactJs, Styled components, Tailwind CSS.
               <div className="flex text-3xl">
                 <a
-                  href="https://nature-defenders.vercel.app/"
+                  href="https://naturedefender-sao.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsLink45Deg className="mr-2" />
                 </a>
                 <a
-                  href="https://github.com/naturedefenders/nature-defenders"
+                  href="https://github.com/naturedefender-safariDAO/naturedefender"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -461,6 +464,147 @@ const Project = ({ show }) => {
             />
           </div>
         </section>
+        <div>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">10.</span>Dapi{" "}
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2 bg-[#233554] p-4"
+            >
+              A developer Web 3 Application page created with ReactJS, Tailwind CSS, Node js and Solidity.
+              <div className="flex text-3xl">
+                <a
+                  href="https://dapi-xyz.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://github.com/DAPI-xyz/Frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={dapi}
+              alt="dapi"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+          </div>
+        </section>
+        </div>
+        <div>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">11.</span>Doravet{" "}
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2 bg-[#233554] p-4"
+            >
+              A Voting Web 3 Application page created with ReactJS, Tailwind CSS Node js and Solidity.
+              <div className="flex text-3xl">
+                <a
+                  href="https://doravet-lake.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://github.com/doravet/doravet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={doravet}
+              alt="doravet"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+          </div>
+        </section>
+        </div>
+        <div>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">12.</span>GreenReward{" "}
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2 bg-[#233554] p-4"
+            >
+              A Recycling Web 3 Application page created with ReactJS, Tailwind CSS Node js and Solidity.
+              <div className="flex text-3xl">
+                <a
+                  href="https://greenrewards-ottochain.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://github.com/greenrewards-ottochain/greenrewards"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={greenreward}
+              alt="greenreward"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+          </div>
+        </section>
+        </div>
       </div>
     </div>
   );
