@@ -11,6 +11,8 @@ import dapi from "../Images/dapi.jpg";
 import doravet from "../Images/doravet.jpg";
 import greenreward from "../Images/greenreward.jpg";
 import linkedinoyo from "../Images/linkedinoyo.jpeg";
+import thriftchainapp from "../Images/thriftchainapp.jpg";
+import croplink from "../Images/croplink.jpg"
 import { BsLink45Deg } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -529,7 +531,7 @@ const Project = ({ show }) => {
               A Voting Web 3 Application page created with ReactJS, Tailwind CSS Node js and Solidity.
               <div className="flex text-3xl">
                 <a
-                  href="https://doravet-lake.vercel.app/"
+                  href="https://doravet-eta.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -604,7 +606,98 @@ const Project = ({ show }) => {
             />
           </div>
         </section>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">13.</span>Thriftchain{" "}
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2 bg-[#233554] p-4"
+            >
+              A Recycling Web 3 Application page created with ReactJS, Tailwind CSS Node js and Solidity.
+              <div className="flex text-3xl">
+                <a
+                  href="https://thriftchain.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://github.com/thriftchain/thriftchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={thriftchainapp}
+              alt="thriftchainapp"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+          </div>
+        </section>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">14.</span>Croplink{" "}
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2 bg-[#233554] p-4"
+            >
+              A Recycling Web 3 Application page created with NextJS, Chakra UI, Node js and Solidity.
+              <div className="flex text-3xl">
+                <a
+                  href="https://croplink-six.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://github.com/max-clinch/croplink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={croplink}
+              alt="croplink"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+          </div>
+        </section>
         </div>
+        
       </div>
     </div>
   );

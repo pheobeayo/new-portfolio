@@ -42,7 +42,7 @@ const Experience = ({ show }) => {
       className={`${show && "blur-sm"}  pt-2 px-2 sm:px-5 md:px-12 lg:pl-24 ff`}
     >
       <div className="mb-10">
-        <h1 className="text-name text-xl sm:text-2xl py-3 text-white">Skills</h1>
+        <h1 className="text-xl sm:text-2xl py-3 text-white">Skills</h1>
         <p className=" font-light">
           Skills and technologies I can implement include:
         </p>
@@ -88,6 +88,13 @@ const Experience = ({ show }) => {
               variants={item}
               className="bg-[#233554] px-5 py-3 m-2 hover:text-white  hover:px-6"
             >
+              Next JS
+            </motion.p>
+            
+            <motion.p
+              variants={item}
+              className="bg-[#233554] px-5 py-3 m-2 hover:text-white  hover:px-6"
+            >
               Styled-Components/ Bootstrap / Tailwind CSS / ChakraUI
             </motion.p>
             <motion.p
@@ -113,6 +120,12 @@ const Experience = ({ show }) => {
               className="bg-[#233554] px-5 py-3 m-2 hover:text-white  hover:px-6"
             >
               Python Flask / Django
+            </motion.p>
+            <motion.p
+              variants={item}
+              className="bg-[#233554] px-5 py-3 m-2 hover:text-white  hover:px-6"
+            >
+              Solidity
             </motion.p>
           </motion.div>
         </div>
@@ -206,7 +219,7 @@ const Experience = ({ show }) => {
               className="pl-3 border-l-2 border-[#aa8b2d1] mb-3 font-thin"
             >
               <div>
-                <h2 className="text-sub ">Full Stack development Intern</h2>
+                <h2 className="text-sub ">I4G x Zuri Internship </h2>
                 <h3>14G Women Internship</h3>
                 <div className="flex items-center ">
                   <GoCalendar />
@@ -220,11 +233,25 @@ const Experience = ({ show }) => {
               className="pl-3 border-l-2 border-[#aa8b2d1] mb-3 font-thin"
             >
               <div>
-                <h2 className="text-sub ">I4G x Zuri Internship </h2>
+                <h2 className="text-sub ">Full Stack development Intern</h2>
                 <h3>Delight Digital Concepts International</h3>
                 <div className="flex items-center">
                   <GoCalendar />
-                  <p>August 2022- Till Date</p>
+                  <p>August 2022- present</p>
+                </div>
+              </div>
+            </motion.article>
+
+            <motion.article
+              variants={items}
+              className="pl-3 border-l-2 border-[#aa8b2d1] mb-3 font-thin"
+            >
+              <div>
+                <h2 className="text-sub ">Web3 frontend developer</h2>
+                <h3>Ayaversity</h3>
+                <div className="flex items-center">
+                  <GoCalendar />
+                  <p>November 2022- April 2023</p>
                 </div>
               </div>
             </motion.article>
@@ -235,10 +262,10 @@ const Experience = ({ show }) => {
             >
               <div>
                 <h2 className="text-sub ">Freelancing </h2>
-                <h3>Freelancing.</h3>
+                <h3>Freelancing through hackathons participation</h3>
                 <div className="flex items-center">
                   <GoCalendar />
-                  <p> 2022 </p>
+                  <p> 2022 -present </p>
                 </div>
               </div>
             </motion.article>
