@@ -95,7 +95,7 @@ const Experience = ({ show }) => {
               variants={item}
               className="bg-[#233554] px-5 py-3 m-2 hover:text-white  hover:px-6"
             >
-              Styled-Components/ Bootstrap / Tailwind CSS / ChakraUI
+             Tailwind CSS  / Bootstrap / Styled-Components / ChakraUI
             </motion.p>
             <motion.p
               variants={item}

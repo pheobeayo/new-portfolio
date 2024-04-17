@@ -2,7 +2,7 @@ import React from "react";
 import careledger from "../Images/careledger.jpeg";
 import vetlyapp from "../Images/vetlyapp.jpeg";
 import krypto from "../Images/krypto.jpeg";
-import goldcart from "../Images/goldcart.jpeg";
+import memoverse from "../Images/memoverse.jpg";
 import qualify from "../Images/qualify.jpeg";
 import nature from "../Images/nature.jpeg";
 import ecommerce from "../Images/ecommerce.jpeg";
@@ -175,8 +175,8 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">04.</span> A simple ecommerce 
-            Application
+            <span className="text-white">04.</span> A blockchain application for blog post 
+            
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
           <motion.img
@@ -186,8 +186,8 @@ const Project = ({ show }) => {
                 x: 0,
               }}
               transition={{ duration: 1 }}
-              src={goldcart}
-              alt="goldcart"
+              src={memoverse}
+              alt="memoverse"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
             <motion.article
@@ -200,17 +200,17 @@ const Project = ({ show }) => {
               className="sm:w-1/2 bg-[#233554] p-4 "
             >
               This e-commerce application was created with HTML, JS, styled with
-              styled components. I created this application during Square Dev hackathon 2023.
+              tailwind CSS. I created this application during Lisk hackathon 2023.
               <div className="flex text-3xl">
                 <a
-                  href="https://goldcart.netlify.app/"
+                  href="https://memoverse-seven.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsLink45Deg className="mr-2" />
                 </a>
                 <a
-                  href="https://github.com/GoldCart-SquareDev/gold-cart"
+                  href="https://github.com/pheobeayo/memoverse"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
