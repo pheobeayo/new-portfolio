@@ -3,7 +3,7 @@ import careledger from "../Images/careledger.jpeg";
 import vetlyapp from "../Images/vetlyapp.jpeg";
 import krypto from "../Images/krypto.jpeg";
 import goldcart from "../Images/goldcart.jpeg";
-import qualify from "../Images/qualify.jpeg";
+import towhouse from "../Images/towhouse.jpg";
 import nature from "../Images/nature.jpeg";
 import ecommerce from "../Images/ecommerce.jpeg";
 import sectify from "../Images/sectify.jpeg";
@@ -12,6 +12,7 @@ import doravet from "../Images/doravet.jpg";
 import greenreward from "../Images/greenreward.jpg";
 import linkedinoyo from "../Images/linkedinoyo.jpeg";
 import thriftchainapp from "../Images/thriftchainapp.jpg";
+import studentchain from "../Images/studentchain.jpg";
 import croplink from "../Images/croplink.jpg"
 import { BsLink45Deg } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
@@ -26,8 +27,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">01.</span> Talent Vetting
-            Application
+            <span className="text-white">01.</span> An Edutech Blockchain App
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -39,17 +39,17 @@ const Project = ({ show }) => {
               transition={{ duration: 1 }}
               className="sm:w-1/2 bg-[#233554] p-4 "
             >
-              This FullStack web3 Talent Vetting application was created with react JS, ExpressJS, MongoDB styled with Styled-Components and ChakraUI. I created this application while undergoing Frontend development bootcamp training at Ayaversity.
+               blockchain-powered EdTech platform that serves as a one-stop solution for students seeking financial support for their educational pursuits (e.g education-related expenses such as tuition fees, exam fees, research expenses, and other educational needs.).
               <div className="flex text-3xl">
                 <a
-                  href="https://dev-vetlyapp.netlify.app/"
+                  href="https://studentchain.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsLink45Deg className="mr-2" />
                 </a>
                 <a
-                  href="https://github.com/Ayagigs/vetly-frontend"
+                  href="https://github.com/pheobeayo/studentchain"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -64,8 +64,8 @@ const Project = ({ show }) => {
                 x: 0,
               }}
               transition={{ duration: 1 }}
-              src={vetlyapp}
-              alt="vetlyapp"
+              src={studentchain}
+              alt="studentchain"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
           </div>
@@ -222,14 +222,13 @@ const Project = ({ show }) => {
           </div>
         </section>
       </div>
-
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">05.</span> Qualify
+            <span className="text-white">05.</span> Talent Vetting
             Application
           </h2>
-          <div className="flex justify-center items-center flex-col sm:flex-row-reverse ">
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
               initial={{ opacity: 0.5, x: 100 }}
               whileInView={{
@@ -237,20 +236,19 @@ const Project = ({ show }) => {
                 x: 0,
               }}
               transition={{ duration: 1 }}
-              className="sm:w-1/2   bg-[#233554] p-4"
+              className="sm:w-1/2 bg-[#233554] p-4 "
             >
-              This is a Talent Vetting app created with React JS chakraUI and styled Components. It's a project
-            I am still working on it.
+              This FullStack web3 Talent Vetting application was created with react JS, ExpressJS, MongoDB styled with Styled-Components and ChakraUI. I created this application while undergoing Frontend development bootcamp training at Ayaversity.
               <div className="flex text-3xl">
                 <a
-                  href="https://qualify-rosy.vercel.app/"
+                  href="https://dev-vetlyapp.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsLink45Deg className="mr-2" />
                 </a>
                 <a
-                  href="https://github.com/Chainlink-Qualify/qualify"
+                  href="https://github.com/Ayagigs/vetly-frontend"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -265,8 +263,56 @@ const Project = ({ show }) => {
                 x: 0,
               }}
               transition={{ duration: 1 }}
-              src={qualify}
-              alt="qualify"
+              src={vetlyapp}
+              alt="vetlyapp"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+          </div>
+        </section>
+      </div>
+      <div>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">06.</span> Townhouse
+            
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row-reverse ">
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2   bg-[#233554] p-4"
+            >
+              Townhouse is an innovative community engagement platform aimed at enhancing community and resident engagement within neighborhoods. Our goal is to provide a transparent centralized digital space where residents can connect, communicate, and collaborate with one another and local government agencies and their local community. React JS, Vite Tailwind CSS and firebase. 
+              <div className="flex text-3xl">
+                <a
+                  href="https://townhouse-webapp.web.app/landing_page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://townhouse-webapp.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={towhouse}
+              alt="towhouse"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
           </div>
@@ -276,7 +322,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">06.</span>Voting Application
+            <span className="text-white">07.</span>Voting Application
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -325,7 +371,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">07.</span>Nature Defenders
+            <span className="text-white">08.</span>Nature Defenders
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row-reverse ">
             <motion.article
@@ -374,7 +420,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">08.</span> Event Application
+            <span className="text-white">09.</span> Event Application
             
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
@@ -423,7 +469,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">09.</span>E-commerce{" "}
+            <span className="text-white">10.</span>E-commerce{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -469,7 +515,7 @@ const Project = ({ show }) => {
         <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">10.</span>Dapi{" "}
+            <span className="text-white">11.</span>Dapi{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -516,7 +562,7 @@ const Project = ({ show }) => {
         <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">11.</span>Doravet{" "}
+            <span className="text-white">12.</span>Doravet{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -563,7 +609,7 @@ const Project = ({ show }) => {
         <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">12.</span>GreenReward{" "}
+            <span className="text-white">13.</span>GreenReward{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -578,14 +624,14 @@ const Project = ({ show }) => {
               A Recycling Web 3 Application page created with ReactJS, Tailwind CSS Node js and Solidity.
               <div className="flex text-3xl">
                 <a
-                  href="https://greenrewards-ottochain.vercel.app/"
+                  href="https://greenearns-six.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsLink45Deg className="mr-2" />
                 </a>
                 <a
-                  href="https://github.com/greenrewards-ottochain/greenrewards"
+                  href="https://github.com/pheobeayo/greenearns"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -608,7 +654,7 @@ const Project = ({ show }) => {
         </section>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">13.</span>Thriftchain{" "}
+            <span className="text-white">14.</span>Thriftchain{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -620,17 +666,17 @@ const Project = ({ show }) => {
               transition={{ duration: 1 }}
               className="sm:w-1/2 bg-[#233554] p-4"
             >
-              A Recycling Web 3 Application page created with ReactJS, Tailwind CSS Node js and Solidity.
+              A Recycling Web 3 Application page created with ReactJS, vite, Tailwind CSS Node js and Solidity.
               <div className="flex text-3xl">
                 <a
-                  href="https://thriftchain.vercel.app/"
+                  href="https://thrift-chain-v2.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsLink45Deg className="mr-2" />
                 </a>
                 <a
-                  href="https://github.com/thriftchain/thriftchain"
+                  href="https://github.com/pheobeayo/thriftchain-version2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -653,7 +699,7 @@ const Project = ({ show }) => {
         </section>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">14.</span>Croplink{" "}
+            <span className="text-white">15.</span>Croplink{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
