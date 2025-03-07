@@ -13,7 +13,8 @@ import greenreward from "../Images/greenreward.jpg";
 import linkedinoyo from "../Images/linkedinoyo.jpeg";
 import thriftchainapp from "../Images/thriftchainapp.jpg";
 import studentchain from "../Images/studentchain.jpg";
-import croplink from "../Images/croplink.jpg"
+import croplink from "../Images/croplink.jpg";
+import vulfund from "../Images/vulfund.jpg";
 import { BsLink45Deg } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -71,11 +72,61 @@ const Project = ({ show }) => {
           </div>
         </section>
       </div>
+      <div>
+        <section className="pb-5">
+          <h2 className="text-name sm:text-xl py-3">
+            <span className="text-white">02.</span> Vulfund
+            Application
+          </h2>
+          <div className="flex justify-center items-center flex-col sm:flex-row ">
+          <motion.img
+              initial={{ opacity: 0.5, x: -100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              src={vulfund}
+              alt="vulfund"
+              className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
+            />
+            <motion.article
+              initial={{ opacity: 0.5, x: 100 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="sm:w-1/2 bg-[#233554] p-4 "
+            >
+              It is a blockchain-powered platform designed to facilitate transparent and impactful crowdfunding for underprivileged communities across Africa.
+              <div className="flex text-3xl">
+                <a
+                  href="https://vulfund.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsLink45Deg className="mr-2" />
+                </a>
+                <a
+                  href="https://github.com/pheobeayo/vulfund"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </motion.article>
+            
+          </div>
+        </section>
+      </div>
+
       
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">02.</span> Krypto-staking Platform
+            <span className="text-white">03.</span> Krypto-staking Platform
             Application
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
@@ -125,7 +176,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">03.</span> Careledger Health
+            <span className="text-white">04.</span> Careledger Health
             Application
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
@@ -175,7 +226,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">04.</span> A simple ecommerce 
+            <span className="text-white">05.</span> A simple ecommerce 
             Application
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
@@ -225,7 +276,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">05.</span> Talent Vetting
+            <span className="text-white">06.</span> Talent Vetting
             Application
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
@@ -273,7 +324,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">06.</span> Townhouse
+            <span className="text-white">07.</span> Townhouse
             
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row-reverse ">
@@ -322,7 +373,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">07.</span>Voting Application
+            <span className="text-white">08.</span>Voting Application
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -371,7 +422,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">08.</span>Nature Defenders
+            <span className="text-white">09.</span>Nature Defenders
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row-reverse ">
             <motion.article
@@ -420,7 +471,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">09.</span> Event Application
+            <span className="text-white">10.</span> Event Application
             
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
@@ -469,7 +520,7 @@ const Project = ({ show }) => {
       <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">10.</span>E-commerce{" "}
+            <span className="text-white">11.</span>E-commerce{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -515,7 +566,7 @@ const Project = ({ show }) => {
         <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">11.</span>Dapi{" "}
+            <span className="text-white">12.</span>Dapi{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -562,7 +613,7 @@ const Project = ({ show }) => {
         <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">12.</span>Doravet{" "}
+            <span className="text-white">13.</span>Doravet{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -609,7 +660,7 @@ const Project = ({ show }) => {
         <div>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">13.</span>GreenReward{" "}
+            <span className="text-white">14.</span>GreenReward{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -654,7 +705,7 @@ const Project = ({ show }) => {
         </section>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">14.</span>Thriftchain{" "}
+            <span className="text-white">15.</span>Thriftchain{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article
@@ -699,7 +750,7 @@ const Project = ({ show }) => {
         </section>
         <section className="pb-5">
           <h2 className="text-name sm:text-xl py-3">
-            <span className="text-white">15.</span>Croplink{" "}
+            <span className="text-white">16.</span>Croplink{" "}
           </h2>
           <div className="flex justify-center items-center flex-col sm:flex-row ">
             <motion.article

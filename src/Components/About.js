@@ -20,7 +20,7 @@ const About = ({ show }) => {
           transition={{ duration: 0.5 }}
           className="sm:w-1/2 text-name sm:p-5 sm:pl-10 sm:text-xl "
         >
-          I'm a Talented Web3 Front-end Developer with proficiency in React JS, Python & Django. I have a keen interest 
+          I'm a Talented Front-end Developer skilled in both web2 and web3 technologies with proficiency in React JS, Next js, Cairo, Rust, WordPress,  Python & Django. I have a keen interest 
           in blockchain, designing and building fully responsive web applications as well as developing 
           and changing websites from the layout to the functionality.
           <section className=" mt-2 sm:text-l text-white text-center">

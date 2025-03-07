@@ -63,7 +63,7 @@ const Home = ({ show }) => {
         transition={{ duration: 0.5 }}
         className="text-sub text-3xl font-bold pb-3 lg:text-5xl"
       >
-        I am a Talented Blockchain developer (Front-end)
+        I am a Talented Frontend developer Skilled in both Web2 and Web3 Technologies
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, x: -50 }}
