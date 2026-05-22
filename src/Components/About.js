@@ -4,52 +4,108 @@ import { MdOutlineMyLocation } from "react-icons/md";
 import img from "../Images/mine.JPG";
 import { motion } from "framer-motion";
 
+const skills = [
+  "React JS", "Next.js", "TypeScript", "TailwindCSS",
+  "Solidity", "Cairo", "Clarity", "Node.js", "Rust",
+  "Python & Django", "AWS SAM / DynamoDB",
+];
+
 const About = ({ show }) => {
   return (
-    <div
-      className={`${show && "blur-sm"}  pt-2 px-2 sm:px-5 md:px-12 lg:pl-24 ff`}
-    >
-      <h1 className="text-name text-xl sm:text-2xl py-3 text-white">About</h1>
-      <div className="flex flex-col sm:flex-row justify-center items-center font-thin">
+    <div className={`${show && "blur-sm"} pt-6 px-5 sm:px-8 md:px-12 lg:pl-24 ff`}>
+      {/* Section header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-10"
+      >
+        <p className="text-[#FF5823] text-xs tracking-widest mb-1">— The Backstory</p>
+        <h1 className="text-name text-3xl sm:text-4xl font-bold">Who is Ifeoluwa?</h1>
+      </motion.div>
+
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+        {/* Text side */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-name sm:p-5 sm:pl-10 sm:text-xl "
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="lg:w-3/5"
         >
-          I'm a Talented Front-end Developer skilled in both web2 and web3 technologies with proficiency in React JS, Next js, Cairo, Rust, WordPress,  Python & Django. I have a keen interest 
-          in blockchain, designing and building fully responsive web applications as well as developing 
-          and changing websites from the layout to the functionality.
-          <section className=" mt-2 sm:text-l text-white text-center">
-            <div className="flex items-center justify-start my-3 pt-6">
-              <TbPhone />
-              <p>+2348032215653</p>
+          <p className="text-sub text-sm sm:text-base leading-relaxed mb-5">
+            Before I ever touched a line of code, I was deep in a{" "}
+            <span className="text-[#FF5823]">Botany laboratory</span> classifying
+            plants, running experiments, learning how complex systems self-organise.
+            I spent years teaching mathematics and science, then made a deliberate leap
+            into software in 2022.
+          </p>
+          <p className="text-sub text-sm sm:text-base leading-relaxed mb-5">
+            Today I'm the{" "}
+            <span className="text-[#FF5823]">Lead Full-Stack Blockchain Developer</span>{" "}
+            at Confidios, building a ZKP-based cryptographic access-control system with
+            Arweave-anchored audit trails. Outside of work, I contribute to Ethereum
+            core merged PRs in{" "}
+            <span className="text-name">ethereum/execution-specs, walletbeat</span>,
+            Also contributing to Stellar, Soroban, Akash, and recognised as a top
+            contributor by the Women in Ethereum Protocol fellowship and other Ecosystems, I am an Open-Source Devrel
+          </p>
+          <p className="text-sub text-sm sm:text-base leading-relaxed mb-8">
+            I am also an independent AI researcher looking forward to pursuing a PHD in AI and blockchain Security. My non-traditional
+            path from Botany to blockchain isn't a detour; it's the whole point.
+          </p>
+
+          {/* Skills grid */}
+          <div className="mb-8">
+            <p className="text-[#FF5823] text-xs tracking-widest mb-3">Technologies</p>
+            <div className="grid grid-cols-2 gap-2">
+              {skills.map((skill) => (
+                <div key={skill} className="flex items-center gap-2 text-sub text-sm">
+                  <span className="text-[#FF5823] text-xs">▸</span>
+                  {skill}
+                </div>
+              ))}
             </div>
-            <div className="flex items-center justify-start my-3">
-              <TbMail />
-              <p>pheobeayo@gmail.com</p>
+          </div>
+
+          {/* Contact details */}
+          <div className="border-t border-[#233554] pt-6 space-y-3">
+            <div className="flex items-center gap-3 text-sub text-sm">
+              <TbPhone className="text-[#FF5823]" />
+              <span>+2348032215653</span>
             </div>
-            <div className="flex items-center justify-start my-3">
-              <MdOutlineMyLocation />
-              <p>Nigeria</p>
+            <div className="flex items-center gap-3 text-sub text-sm">
+              <TbMail className="text-[#FF5823]" />
+              <a
+                href="mailto:pheobeayo@gmail.com"
+                className="hover:text-[#FF5823] transition-colors"
+              >
+                pheobeayo@gmail.com
+              </a>
             </div>
-          </section>
+            <div className="flex items-center gap-3 text-sub text-sm">
+              <MdOutlineMyLocation className="text-[#FF5823]" />
+              <span>Nigeria</span>
+            </div>
+          </div>
         </motion.div>
 
+        {/* Image side */}
         <motion.div
-          initial={{ opacity: 0.4, zoom: 1 }}
-          animate={{
-            opacity: 1,
-            zoom: 0,
-          }}
-          transition={{ duration: 0.5 }}
-          className="sm:w-1/2 flex justify-center pt-5"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="lg:w-2/5 flex justify-center lg:justify-start"
         >
-          <div className=" sm:w-1/2 border-2 border-[#FF5823">
-            <img src={img} alt="" className=" w-full  z-10 m-2 hover:ml-0" />
+          <div className="relative">
+            <div
+              className="absolute inset-0 border-2 border-[#FF5823] rounded-sm"
+              style={{ transform: "translate(8px, 8px)", zIndex: 0 }}
+            />
+            <img
+              src={img}
+              alt="Ifeoluwa Sanni"
+              className="relative z-10 w-64 sm:w-72 lg:w-80 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500"
+            />
           </div>
         </motion.div>
       </div>

@@ -1,163 +1,150 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RiMenu4Fill } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
-// import { TbWebhook } from "react-icons/tb";
 import { motion } from "framer-motion";
 import Social from "./Social";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [rotate, setRotate] = useState(false);
+  const location = useLocation();
 
-  const variants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
+  const navLinks = [
+    { to: "/about", label: "About" },
+    { to: "/projects", label: "Projects" },
+    { to: "/experience", label: "Experience" },
+    { to: "/certificates", label: "Certification" },
+    { to: "/resume", label: "Resume" },
+  ];
 
-  const item = {
-    hidden: { opacity: 0, x: -50 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-      },
-    },
-  };
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="py-5 px-5 md:px-12  ff ">
-      <section className=" flex items-center justify-between ">
-        <div className="sm:w-1/4 flex justify-start">
-          <Link to="/">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                rotate: [0, 300, 300, 0],
-              }}
-              transition={{ duration: 1 }}
-              className="text-4xl "
+    <header className="py-5 px-5 md:px-12 ff">
+      <section className="flex items-center justify-between">
+        {/* Logo — styled like KR.dev but personalised */}
+        <Link to="/">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-2"
+          >
+            <div
+              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
+              style={{ background: "#FF5823", color: "#0a192f" }}
             >
-              <motion.div
-                animate={{ rotate: rotate ? [0, 300, 300, 0] : 0 }}
-                transition={{ duration: 2 }}
-                onClick={() => setRotate(!rotate)}
-              >
-                Ifeoluwa
-                {/* <TbWebhook /> */}
-              </motion.div>
-            </motion.div>
-          </Link>
-        </div>
+              IS
+            </div>
+            <span className="text-white text-sm font-light tracking-widest hidden sm:block">
+              .dev
+            </span>
+          </motion.div>
+        </Link>
 
+        {/* Desktop nav */}
         <motion.nav
-          variants={variants}
-          initial="hidden"
-          animate="show"
-          transition={{ duration: 0.3, delay: 0.05, staggerChildren: 0.2 }}
-          className="hidden sm:flex sm:w-3/4 justify-evenly lg:w-2/3 text-white items-center font-harline text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="hidden sm:flex items-center gap-8 text-sm"
         >
-          
-          <motion.div variants={item} className="flex flex-col ">
-            <Link
-              to="/about"
-              className="hover:text-[#FF5823] focus:text-[#FF5823]"
+          {navLinks.map((link, i) =>
+            link.label === "Resume" ? (
+              <motion.div
+                key={link.label}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * i + 0.2 }}
+              >
+                <Link
+                  to={link.to}
+                  className="border border-[#FF5823] text-[#FF5823] px-4 py-1.5 rounded-sm text-xs tracking-widest hover:bg-[#FF5823] hover:text-[#0a192f] transition-all duration-300"
+                >
+                  Resume
+                </Link>
+              </motion.div>
+            ) : (
+              <motion.div
+                key={link.label}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * i + 0.2 }}
+              >
+                <Link
+                  to={link.to}
+                  className={`relative tracking-wider transition-colors duration-200 ${
+                    isActive(link.to)
+                      ? "text-[#FF5823]"
+                      : "text-[#ccd6f6] hover:text-[#FF5823]"
+                  }`}
+                >
+                  {link.label}
+                  {isActive(link.to) && (
+                    <span className="absolute -bottom-1 left-0 w-full h-px bg-[#FF5823]" />
+                  )}
+                </Link>
+              </motion.div>
+            )
+          )}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <a
+              href="mailto:pheobeayo@gmail.com"
+              className="text-[#ccd6f6] hover:text-[#FF5823] tracking-wider transition-colors duration-200"
             >
-              About
-            </Link>
+              Contact
+            </a>
           </motion.div>
-          <motion.div variants={item}>
-            {" "}
-            <Link
-              to="/projects"
-              className="hover:text-[#FF5823] focus:text-[#FF5823]"
-            >
-              Projects
-            </Link>
-          </motion.div>
-
-          <motion.div variants={item}>
-            {" "}
-            <Link
-              to="/experience"
-              className="hover:text-[#FF5823] focus:text-[FF5823]"
-            >
-              Experience
-            </Link>
-          </motion.div>
-
-          <motion.div variants={item}>
-            {" "}
-            <Link
-              to="/certificates"
-              className="hover:text-[#FF5823] focus:text-[FF5823]"
-            >
-              Certification
-            </Link>
-          </motion.div>
-
-
-          <motion.div variants={item}>
-            {" "}
-            <Link
-              to="/contact"
-              className="hover:text-[#FF5823] focus:text-[FF5823]"
-            >
-              Contact Me
-            </Link>
-          </motion.div>
-
-          {/* <motion.p variants={item}>Resume</motion.p> */}
-          <motion.div variants={item}>
-            {" "}
-            <Link
-              to="/resume"
-              className="border-white px-3 py-1 border rounded-sm hover:bg-[#233554]"
-            >
-              Resume
-            </Link>
-          </motion.div>
-          
         </motion.nav>
 
-        <div className="sm:hidden text-5xl z-10" onClick={() => setShow(!show)}>
+        {/* Mobile hamburger */}
+        <div
+          className="sm:hidden text-4xl z-50 cursor-pointer text-white"
+          onClick={() => setShow(!show)}
+        >
           {show ? <MdClose /> : <RiMenu4Fill />}
         </div>
       </section>
 
+      {/* Mobile menu */}
       <nav
-        className={`sm:hidden top-0 right-0 bg-navv absolute h-screen w-2/3 ease-in-out duration-300 flex items-center justify-center
-        ${show ? "translate-x-0 " : "translate-x-full"}`}
+        className={`sm:hidden top-0 right-0 bg-navv absolute h-screen w-2/3 z-40 ease-in-out duration-300 flex items-center justify-center
+        ${show ? "translate-x-0" : "translate-x-full"}`}
+        style={{ boxShadow: "-4px 0 30px rgba(0,0,0,0.5)" }}
       >
-        <div
-          className={`flex flex-col text-2xl justify-between items-center h-1/2 `}
-        >
-          <Link to="/about" onClick={() => setShow(!show)}>
-            About
-          </Link>
-          <Link to="/projects" onClick={() => setShow(!show)}>
-            Projects
-          </Link>
-          <Link to="/experience" onClick={() => setShow(!show)}>
-            Experience
-          </Link>
-          <Link to="/contact" onClick={() => setShow(!show)}>
-            Contact Me
-          </Link>
-          <p>Resume</p>
+        <div className="flex flex-col text-xl gap-8 items-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              to={link.to}
+              onClick={() => setShow(false)}
+              className={`tracking-widest transition-colors duration-200 ${
+                isActive(link.to)
+                  ? "text-[#FF5823]"
+                  : "text-[#ccd6f6] hover:text-[#FF5823]"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href="mailto:pheobeayo@gmail.com"
+            onClick={() => setShow(false)}
+            className="text-[#ccd6f6] hover:text-[#FF5823] tracking-widest"
+          >
+            Contact
+          </a>
         </div>
       </nav>
-      <div className=" fixed bottom-32 right-4 sm:right-8 lg-right-16">
+
+      <div className="fixed bottom-32 right-4 sm:right-8">
         <Social />
       </div>
-    </div>
+    </header>
   );
 };
 
