@@ -6,16 +6,19 @@
 @font-face {
     font-family: 'Calibrel';
     src: url('./fonts/Calibre/Calibre-Medium.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Cali';
     src: url('./fonts/Calibre/Calibre-Regular.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SFMono';
-    src: url('./fonts/SFMono/SFMono-Semibold.woff2') ;
+    src: url('./fonts/SFMono/SFMono-Semibold.woff2') format('woff2');
+    font-display: swap;
 }
 
 body{
@@ -39,11 +42,15 @@ body{
     font-family: 'SFMono';
 }
 
-input, textarea{
-    border: none;
-    outline: none;
+/* Visible keyboard focus for links and buttons */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid #FF5823;
+    outline-offset: 3px;
 }
 
-pdf{
-    height: 900px;
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import { TbPhone, TbMail } from "react-icons/tb";
 import { MdOutlineMyLocation } from "react-icons/md";
-import img from "../Images/mine.JPG";
+import img from "../Images/mine.webp";
 import { motion } from "framer-motion";
 
 const skills = [
   "React JS", "Next.js", "TypeScript", "TailwindCSS",
-  "Solidity", "Cairo", "Clarity", "Node.js", "Rust",
-  "Python & Django", "AWS SAM / DynamoDB",
+  "Solidity (Foundry / Hardhat)", "Cairo", "Clarity", "Rust / Soroban",
+  "Node.js", "Python (Flask / FastAPI)", "AWS / DynamoDB", "Supabase",
 ];
 
 const About = ({ show }) => {
@@ -43,15 +43,23 @@ const About = ({ show }) => {
             Today I'm the{" "}
             <span className="text-[#FF5823]">Lead Full-Stack Blockchain Developer</span>{" "}
             at Confidios, building a ZKP-based cryptographic access-control system with
-            Arweave-anchored audit trails. Outside of work, I contribute to Ethereum
-            core merged PRs in{" "}
-            <span className="text-name">ethereum/execution-specs, walletbeat</span>,
-            Also contributing to Stellar, Soroban, Akash, and recognised as a top
-            contributor by the Women in Ethereum Protocol fellowship and other Ecosystems, I am an Open-Source Devrel
+            Arweave-anchored audit trails. Outside of work I contribute to protocol
+            open source, with merged PRs in{" "}
+            <span className="text-name">ethereum/execution-specs</span> and{" "}
+            <span className="text-name">walletbeat</span> and contributions across
+            Stellar, Soroban and Akash. I review smart contracts for{" "}
+            <span className="text-name">GoodDollar</span> and do open-source DevRel
+            at Dev3Pack.
+          </p>
+          <p className="text-sub text-sm sm:text-base leading-relaxed mb-5">
+            Along the way: Women in Ethereum Protocol fellow (recognised as a top
+            contributor), Ethereum Foundation DevConnect Scholar, and 1st place at
+            the EthAccra hackathon.
           </p>
           <p className="text-sub text-sm sm:text-base leading-relaxed mb-8">
-            I am also an independent AI researcher looking forward to pursuing a PHD in AI and blockchain Security. My non-traditional
-            path from Botany to blockchain isn't a detour; it's the whole point.
+            I'm also an independent AI researcher, working towards a PhD in AI and
+            blockchain security. My non-traditional path from Botany to blockchain
+            isn't a detour; it's the whole point.
           </p>
 
           {/* Skills grid */}
@@ -84,7 +92,7 @@ const About = ({ show }) => {
             </div>
             <div className="flex items-center gap-3 text-sub text-sm">
               <MdOutlineMyLocation className="text-[#FF5823]" />
-              <span>Nigeria</span>
+              <span>Abuja, Nigeria</span>
             </div>
           </div>
         </motion.div>
@@ -96,7 +104,7 @@ const About = ({ show }) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="lg:w-2/5 flex justify-center lg:justify-start"
         >
-          <div className="relative">
+          <div className="relative self-start">
             <div
               className="absolute inset-0 border-2 border-[#FF5823] rounded-sm"
               style={{ transform: "translate(8px, 8px)", zIndex: 0 }}
@@ -104,7 +112,8 @@ const About = ({ show }) => {
             <img
               src={img}
               alt="Ifeoluwa Sanni"
-              className="relative z-10 w-64 sm:w-72 lg:w-80 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500"
+              width="720" height="1079"
+              className="relative z-10 w-64 sm:w-72 lg:w-80 h-auto object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500"
             />
           </div>
         </motion.div>

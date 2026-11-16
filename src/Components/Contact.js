@@ -2,7 +2,22 @@ import { TbPhone, TbMail } from "react-icons/tb";
 import { MdOutlineMyLocation } from "react-icons/md";
 import { motion } from "framer-motion";
 
+const EMAIL = "pheobeayo@gmail.com";
+
+const field =
+  "py-3 px-4 bg-[#112240] text-name placeholder:text-[#4a5568] text-sm border border-[#233554] focus:border-[#FF5823] transition-colors outline-none rounded-sm";
+
 const Contact = ({ show }) => {
+  // The site is a static build with no form backend, so the form composes an
+  // email in the visitor's own mail app instead of posting to a server.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const subject = data.get("subject") || `Portfolio enquiry from ${data.get("name")}`;
+    const body = `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`;
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className={`${show && "blur-sm"} pt-6 px-5 sm:px-8 md:px-12 lg:pl-24 ff`}>
       <motion.div
@@ -25,25 +40,26 @@ const Contact = ({ show }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          method="post"
-          data-netlify="true"
-          name="Contact"
-          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
-          <input type="hidden" name="form-name" value="Contact" />
-
           <div className="flex gap-3">
             <input
               type="text"
               name="name"
               placeholder="Name"
-              className="py-3 px-4 bg-[#112240] w-1/2 text-name placeholder:text-[#4a5568] text-sm border border-[#233554] focus:border-[#FF5823] transition-colors outline-none rounded-sm"
+              aria-label="Your name"
+              autoComplete="name"
+              required
+              className={`${field} w-1/2`}
             />
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="py-3 px-4 bg-[#112240] w-1/2 text-name placeholder:text-[#4a5568] text-sm border border-[#233554] focus:border-[#FF5823] transition-colors outline-none rounded-sm"
+              aria-label="Your email"
+              autoComplete="email"
+              required
+              className={`${field} w-1/2`}
             />
           </div>
 
@@ -51,14 +67,17 @@ const Contact = ({ show }) => {
             type="text"
             name="subject"
             placeholder="Subject"
-            className="py-3 px-4 bg-[#112240] text-name placeholder:text-[#4a5568] text-sm border border-[#233554] focus:border-[#FF5823] transition-colors outline-none rounded-sm"
+            aria-label="Subject"
+            className={field}
           />
 
           <textarea
             placeholder="Your message..."
             name="message"
+            aria-label="Your message"
             rows={6}
-            className="py-3 px-4 bg-[#112240] text-name placeholder:text-[#4a5568] text-sm border border-[#233554] focus:border-[#FF5823] transition-colors outline-none resize-none rounded-sm"
+            required
+            className={`${field} resize-none`}
           />
 
           <button
@@ -67,6 +86,9 @@ const Contact = ({ show }) => {
           >
             Send Message ↗
           </button>
+          <p className="text-sub text-xs">
+            This opens your email app with the message ready to send.
+          </p>
         </motion.form>
 
         {/* Contact info */}
@@ -85,7 +107,7 @@ const Contact = ({ show }) => {
               <div className="w-8 h-8 rounded-sm bg-[#112240] flex items-center justify-center">
                 <TbPhone className="text-[#FF5823]" />
               </div>
-              <span className="text-sub text-sm">+2348032215653</span>
+              <a href="tel:+2348032215653" className="text-sub text-sm hover:text-[#FF5823] transition-colors">+234 803 221 5653</a>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-sm bg-[#112240] flex items-center justify-center">
@@ -99,7 +121,7 @@ const Contact = ({ show }) => {
               <div className="w-8 h-8 rounded-sm bg-[#112240] flex items-center justify-center">
                 <MdOutlineMyLocation className="text-[#FF5823]" />
               </div>
-              <span className="text-sub text-sm">Nigeria</span>
+              <span className="text-sub text-sm">Abuja, Nigeria</span>
             </div>
           </div>
         </motion.div>

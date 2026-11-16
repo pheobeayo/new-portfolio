@@ -1,8 +1,8 @@
 import React from "react";
-import frontendmeta from "../Images/frontendmeta.jpeg";
-import AYA_CERT from "../Images/AYA_CERT.png";
-import html from "../Images/html.jpeg";
-import uiux from "../Images/uiux.jpeg";
+import frontendmeta from "../Images/frontendmeta.webp";
+import AYA_CERT from "../Images/aya_cert.webp";
+import html from "../Images/html.webp";
+import uiux from "../Images/uiux.webp";
 import { BsLink45Deg } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -43,7 +43,7 @@ const Certification = ({ show }) => {
               }}
               transition={{ duration: 1 }}
               src={frontendmeta}
-              alt="frontendmeta"
+              alt="Meta Front-End Developer certificate" loading="lazy"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
           </div>
@@ -61,7 +61,7 @@ const Certification = ({ show }) => {
               }}
               transition={{ duration: 1 }}
               src={html}
-              alt="html"
+              alt="HTML certificate" loading="lazy"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
             <motion.article
@@ -120,7 +120,7 @@ const Certification = ({ show }) => {
               }}
               transition={{ duration: 1 }}
               src={AYA_CERT}
-              alt="WEB3 LMS application"
+              alt="AYA Web3 Fellowship certificate" loading="lazy"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
           </div>
@@ -138,7 +138,7 @@ const Certification = ({ show }) => {
               }}
               transition={{ duration: 1 }}
               src={uiux}
-              alt="evTOL application"
+              alt="Google UX Design certificate" loading="lazy"
               className="sm:w-1/2 rounded-b-lg sm:rounded-lg"
             />
             <motion.article
