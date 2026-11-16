@@ -23,7 +23,7 @@ const Navbar = () => {
     <header className="py-5 px-5 md:px-12 ff">
       <section className="flex items-center justify-between">
         {/* Logo — styled like KR.dev but personalised */}
-        <Link to="/">
+        <Link to="/" aria-label="Home">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -92,28 +92,36 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            <a
-              href="mailto:pheobeayo@gmail.com"
-              className="text-[#ccd6f6] hover:text-[#FF5823] tracking-wider transition-colors duration-200"
+            <Link
+              to="/contact"
+              className={`relative tracking-wider transition-colors duration-200 ${
+                isActive("/contact")
+                  ? "text-[#FF5823]"
+                  : "text-[#ccd6f6] hover:text-[#FF5823]"
+              }`}
             >
               Contact
-            </a>
+            </Link>
           </motion.div>
         </motion.nav>
 
         {/* Mobile hamburger */}
-        <div
+        <button
+          type="button"
           className="sm:hidden text-4xl z-50 cursor-pointer text-white"
           onClick={() => setShow(!show)}
+          aria-label={show ? "Close menu" : "Open menu"}
+          aria-expanded={show}
         >
           {show ? <MdClose /> : <RiMenu4Fill />}
-        </div>
+        </button>
       </section>
 
       {/* Mobile menu */}
       <nav
-        className={`sm:hidden top-0 right-0 bg-navv absolute h-screen w-2/3 z-40 ease-in-out duration-300 flex items-center justify-center
-        ${show ? "translate-x-0" : "translate-x-full"}`}
+        aria-hidden={!show}
+        className={`sm:hidden top-0 right-0 bg-navv fixed h-screen w-2/3 z-40 ease-in-out duration-300 flex items-center justify-center
+        ${show ? "translate-x-0" : "translate-x-full invisible"}`}
         style={{ boxShadow: "-4px 0 30px rgba(0,0,0,0.5)" }}
       >
         <div className="flex flex-col text-xl gap-8 items-center">
@@ -131,13 +139,17 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <a
-            href="mailto:pheobeayo@gmail.com"
+          <Link
+            to="/contact"
             onClick={() => setShow(false)}
-            className="text-[#ccd6f6] hover:text-[#FF5823] tracking-widest"
+            className={`tracking-widest transition-colors duration-200 ${
+              isActive("/contact")
+                ? "text-[#FF5823]"
+                : "text-[#ccd6f6] hover:text-[#FF5823]"
+            }`}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </nav>
 

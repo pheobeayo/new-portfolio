@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 const Home = ({ show }) => {
   const roles = [
     "Lead Full-Stack Blockchain Developer",
-    "Frontend developer",
-    "Full-stack developer",
+    "Smart Contract Engineer & Reviewer",
     "Protocol Contributor",
-    "Open-Source Builder",
-    "Technical writer",
+    "Open-Source DevRel",
+    "Technical Writer",
     "AI Researcher",
   ];
 
@@ -61,8 +60,8 @@ const Home = ({ show }) => {
         className="text-sub ff text-sm sm:text-base max-w-lg leading-relaxed mb-8"
       >
         I started out studying plants. Now I build the protocols that move trust.
-        From Botany labs to Frontend development, Blockchain development, AI research and development; every step taught me how systems
-        work, and how to make them better.
+        From Botany labs to smart contracts, full-stack products and AI research,
+        every step taught me how systems work, and how to make them better.
       </motion.p>
 
       <motion.div

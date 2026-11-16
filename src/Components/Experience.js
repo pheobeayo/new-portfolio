@@ -27,19 +27,19 @@ const Experience = ({ show }) => {
   const skillGroups = [
     {
       label: "Smart Contracts",
-      skills: ["Solidity", "Cairo (StarkNet)", "Clarity (Stacks)", "Hardhat", "Foundry"],
+      skills: ["Solidity", "Cairo (StarkNet)", "Clarity (Stacks)", "Rust (Soroban)", "Hardhat", "Foundry", "OpenZeppelin UUPS"],
     },
     {
       label: "Frontend",
-      skills: ["React JS", "Next JS", "TypeScript", "Tailwind CSS", "Vite", "Wagmi / Ethers.js"],
+      skills: ["React JS", "Next JS", "TypeScript", "Tailwind CSS", "Vite", "Wagmi / Viem", "React Query"],
     },
     {
       label: "Backend & Infra",
-      skills: ["Node.js", "Express", "Python", "DynamoDB", "AWS SAM", "MongoDB"],
+      skills: ["Node.js", "Express", "Python (Flask / FastAPI)", "DynamoDB", "AWS SAM", "Supabase", "MongoDB"],
     },
     {
       label: "Protocols & Tools",
-      skills: ["Ethereum", "StarkNet", "Celo", "Stellar/Soroban", "IPFS", "The Graph"],
+      skills: ["Ethereum", "StarkNet", "Celo", "Avalanche", "Stellar/Soroban", "IPFS", "The Graph"],
     },
     {
       label: "Tooling & Craft",
@@ -66,8 +66,18 @@ const Experience = ({ show }) => {
     },
     {
       repo: "walletbeat/walletbeat",
-      detail: "Chain-verification & commit-hash enforcement",
+      detail: "PR #878 — EIP directory UI; chain-verification & commit-hash enforcement",
       type: "Wallet Tooling",
+    },
+    {
+      repo: "GoodDollar/GoodWidget",
+      detail: "Code reviewer — governance lifecycle (#99), wallet connect redesign (#135), streaming widget (#38)",
+      type: "Code Review",
+    },
+    {
+      repo: "GoodDollar/GoodSDKs",
+      detail: "Code reviewer — invite SDK (#44), four review rounds",
+      type: "Code Review",
     },
     {
       repo: "enkryptcom/enkrypt",
@@ -149,7 +159,7 @@ const Experience = ({ show }) => {
               href={`https://github.com/${oss.repo}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start justify-between bg-[#112240] px-4 py-3 rounded-sm border border-[#233554] hover:border-[#FF5823] transition-colors duration-300 group"
+              className="flex items-start justify-between gap-2 bg-[#112240] px-4 py-3 rounded-sm border border-[#233554] hover:border-[#FF5823] transition-colors duration-300 group"
             >
               <div>
                 <p className="text-name text-sm font-medium group-hover:text-[#FF5823] transition-colors">
@@ -258,6 +268,18 @@ const Experience = ({ show }) => {
               <div className="flex items-center gap-1 mt-1 text-xs text-sub">
                 <GoCalendar />
                 <p>2024 — Present</p>
+              </div>
+            </motion.article>
+
+            <motion.article variants={items} className="pl-3 border-l-2 border-[#233554] mb-4 font-thin">
+              <h2 className="text-sub text-sm">Smart Contract Code Reviewer & Bounty Lead</h2>
+              <h3 className="text-name text-xs mt-0.5">GoodDollar Protocol</h3>
+              <p className="text-sub text-xs mt-1 leading-relaxed">
+                Multi-round reviews of pull requests across GoodWidget, GoodSDKs and GoodProtocolUI; scoping and review verdicts for GoodBounties issues.
+              </p>
+              <div className="flex items-center gap-1 mt-1 text-xs text-sub">
+                <GoCalendar />
+                <p>Present</p>
               </div>
             </motion.article>
 
